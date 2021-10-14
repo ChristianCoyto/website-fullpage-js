@@ -1,0 +1,408 @@
+/* Estilos Generales */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.texto-rojo {
+    font-weight: 600;
+    color: rgb(143, 30, 30);
+}
+
+.texto-naranja {
+    font-weight: 300;
+    color: rgb(219, 173, 15);
+}
+
+.texto-blanco {
+    font-weight: 700;
+    color: #fff;
+}
+
+.texto-negro {
+    color: #000;
+}
+
+/* Clases de Fullpage.js */
+
+#fp-nav ul li a span {
+    background: #ff5722;
+}
+
+#fp-nav ul li .fp-tooltip {
+    color: #ff5722;
+}
+
+/* Menu de Navegacion */
+
+.nav {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 70;
+    width: 100%;
+    margin: 0;
+    padding: 10px 20px;
+}
+
+.nav li, .nav a {
+    display: inline-block;
+    margin: 10px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 19px;
+    color: #c2c2c2;
+    transition: .5s ease;
+}
+
+.nav li.active {
+    border-bottom: 2px solid #ff5722;
+}
+
+.menu li a {
+    transition: .5s ease;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li.active a, .menu li:hover a {
+    color: #ff5722;
+}
+
+.marca {
+    width: 150px;
+}
+
+.marca img {
+    width: 80%;
+}
+
+/* Header */
+
+.header {
+    background: url('../media/alfa-romeo-c39.jpg');
+    background-position: center;
+    position: relative;
+}
+
+.header .contenedor-titulo {
+    top: 15%;
+    text-align: center;
+    position: relative;
+    z-index: 99;
+}
+
+.header .titulo {
+    font-size: 60px;
+    text-transform: uppercase;
+}
+
+.header .contenedor-icono, .section .contenedor-icono {
+    position: absolute;
+    z-index: 99;
+    bottom: 3%;
+    left: 50%;
+    font-size: 40px;
+    animation: bajar-subir 1s ease infinite;
+}
+
+.bg-video {
+    position: absolute;
+    z-index: 10;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-size: 100%;
+    background: #000;
+    background-position: center;
+    background-size: contain;
+    object-fit: cover;
+}
+
+/* Animaciones */
+
+@keyframes bajar-subir {
+    0% {
+        transform: translateY(20px);
+    }
+    25% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(20px);
+    }
+}
+
+/* Autos */
+
+.autos article {
+    background-position: center;
+    background-size: cover;
+}
+
+.autos article:nth-child(1) {
+    background-image: url('../media/mercedes-amg-f1.jpg');
+}
+
+.autos article:nth-child(2) {
+    background-image: url('../media/aston-martin.jpg');
+}
+
+.autos article:nth-child(3) {
+    background-image: url('../media/ferrari.jpg');
+}
+
+.autos .informacion-autos {
+    margin: 0 30px;
+}
+
+.autos .informacion-autos::before {
+    content: "";
+    height: 50px;
+    width: 2px;
+    display: inline-block;
+    background: rgb(219, 173, 15);
+    position: absolute;
+    top: 50%;
+    margin: -10px;
+}
+
+article.slide {
+    position: relative;
+}
+
+article.slide .slide1 {
+    position: absolute;
+    top: 15%;
+    left: 75%;
+}
+
+article.slide .slide2 {
+    position: absolute;
+    top: 20%;
+    left: 5%;
+}
+
+article.slide .slide3 {
+    position: absolute;
+    top: 16%;
+    left: 70%;
+}
+
+.autos .modelo {
+    font-size: 45px;
+}
+
+.autos .año {
+    font-size: 25px;
+}
+
+/* Clases de fullpage.js - Flechas de Slide */
+
+.fp-controlArrow.fp-next, .fp-controlArrow.fp-prev {
+    top: 95%;
+}
+
+.fp-controlArrow.fp-prev {
+    left: 40%;
+    border-width: 20px 20px 20px 0;
+    border-color: transparent rgb(255, 255, 255) transparent transparent;
+}
+
+.fp-controlArrow.fp-next {
+    right: 37.5%;
+    border-width: 20px 0 20px 20px;
+    border-color: transparent transparent transparent rgb(255, 255, 255);
+}
+
+/* Footer */
+
+.footer {
+    background-image: url(/media/fondo.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.contenedor-footer {
+    width: 80%;
+    position: absolute;
+    top: 25%;
+    background: #08080817;
+    border-radius: 10px;
+    box-shadow: 8px 8px 32px black;
+}
+
+.footer .texto-naranja {
+    text-transform: uppercase;
+    font-size: 60px;
+    letter-spacing: 2px;
+    margin-bottom: 40px;
+}
+
+.footer h2 {
+    opacity: 0;
+    font-family: 'Oswald', sans-serif;
+    transition: 1s ease all;
+}
+
+.footer .redes-sociales {
+    height: 93px;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    font-size: 40px;
+}
+
+.footer .redes-sociales a {
+    display: flex;
+    /* width: 74px; */
+    /* height: 74px; */
+    /* background: #fff; */
+    color: #30313A;
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100px;
+    margin: 0 20px;
+    transition: all .7s ease;
+}
+
+.footer .redes-sociales a i {
+    transition: all .5s ease;
+
+}
+
+.footer .facebook i {
+    color: #3b5998;
+}
+
+.footer .twitter i {
+    color: #1da1f2;
+}
+
+.footer .instagram i {
+    color: #c13584;
+}
+
+.footer .facebook:hover i,
+.footer .twitter:hover i,
+.footer .instagram:hover i{
+    transform: scale(1.5);
+}
+
+/* Mediaqueries */
+
+@media screen and (max-width: 888px) {
+    article.slide .slide1 {
+        top: 75%;
+        left: 5%;
+        margin: 0;
+    }
+    article.slide .slide1 .modelo {
+        font-size: 30px;
+    }
+    article.slide .slide1 .año {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .menu li a, .menu li.active a {
+        font-size: 18px;
+    }
+    .modelo {
+        font-size: 40px;
+    }
+    .precio {
+        font-size: 23px;
+    }
+    .footer h2 {
+        font-size: 15px;
+    }
+    .footer .redes-sociales {
+        font-size: 30px;
+    }
+    .footer .redes-sociales a {
+        width: 70px;
+        height: 70px;
+    }
+    .footer .texto-naranja {
+        font-size: 40px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .header .titulo {
+        font-size: 60px;
+    }
+    .informacion-autos {
+        position: absolute;
+        top: 70%;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .marca img {
+        width: 43%;
+    }
+    .contenedor-titulo .titulo {
+        margin-top: 5px;
+    }
+    .contenedor-titulo .titulo span {
+        font-size: 45px;
+    }
+    .nav {
+        display: block;
+        text-align: center;
+    }
+    .nav a {
+        font-size: 16px;
+        margin-bottom: 0;
+    }
+    .menu {
+        display: flex;
+        justify-content: space-between;
+    }
+    .menu li a, .menu li.active a {
+        font-size: 15px;
+        padding: 5px;
+    }
+    .titulo {
+        font-size: 45px;
+    }
+    .autos .modelo {
+        font-size: 30px;
+    }
+    article.slide .slide2 {
+        top: 18%;
+        left: 1%;
+    }
+    .footer .texto-naranja {
+        font-size: 29px;
+    }
+    .footer .redes-sociales a {
+        width: 50px;
+        height: 50px;
+    }
+    .footer .redes-sociales a i {
+        font-size: 24px;
+    }
+}
